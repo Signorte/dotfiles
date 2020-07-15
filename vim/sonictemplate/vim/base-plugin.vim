@@ -1,5 +1,5 @@
 " {{_name_}}
-" Author: Signorte
+" Author: skanehira
 " License: MIT
 
 if exists('loaded_{{_name_}}')

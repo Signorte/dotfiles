@@ -78,7 +78,7 @@ let g:sonictemplate_vim_template_dir = ["~/.vim/template"]
 '''
 # manage session
 #[[plugins]]
-#repo = 'Signorte/vsession'
+#repo = 'skanehira/vsession'
 
 # show git diff
 [[plugins]]
@@ -126,7 +126,7 @@ repo = 'vim-jp/vimdoc-ja'
 
 # translate language
 [[plugins]]
-repo = 'Signorte/translate.vim'
+repo = 'skanehira/translate.vim'
 
 [[plugins]]
 repo = 'vim-jp/vital.vim'
@@ -145,10 +145,10 @@ repo = 'tokorom/vim-review'
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Signorte/docker.vim'
+repo = 'skanehira/docker.vim' 
 
 [[plugins]]
-repo = 'Signorte/docker-compose.vim'
+repo = 'skanehira/docker-compose.vim'
 
 [[plugins]]
 repo = 'LeafCage/vimhelpgenerator'
@@ -160,7 +160,7 @@ repo = 'kshenoy/vim-signature'
 repo = 'thinca/vim-themis'
 
 [[plugins]]
-repo = 'Signorte/preview-markdown.vim'
+repo = 'skanehira/preview-markdown.vim'
 
 [[plugins]]
 repo = 'tweekmonster/helpful.vim'
@@ -188,7 +188,7 @@ repo = 'mattn/vim-lsp-settings'
 merged = 0
 
 [[plugins]]
-repo = 'Signorte/google-map.vim'
+repo = 'skanehira/google-map.vim'
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'

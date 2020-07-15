@@ -666,8 +666,8 @@ imap <silent> <C-l> <plug>(sonictemplate-postfix)
 
 " vimhelpgenarator {{{
 let g:vimhelpgenerator_version = ''
-let g:vimhelpgenerator_author = 'Author: Signorte <cogito.ergo.sumirus@gmail.com>'
-let g:vimhelpgenerator_uri = 'https://github.com/Signorte/'
+let g:vimhelpgenerator_author = 'Author: skanehira <sho19921005@gmail.com>'
+let g:vimhelpgenerator_uri = 'https://github.com/skanehira/'
 let g:vimhelpgenerator_defaultlanguage = 'en'
 " }}}
 
