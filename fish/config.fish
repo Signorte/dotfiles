@@ -14,6 +14,7 @@ set -x EDITOR vim
 set -x LC_CTYPE "en_US.UTF-8"
 set -x GHQ_ROOT $GOPATH/src
 set -x GO111MODULE auto
+set fish_greeting # undisplay "welcome to fish,~"
 
 # alias
 alias lg="lazygit"

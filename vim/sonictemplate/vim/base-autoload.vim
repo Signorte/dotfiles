@@ -1,5 +1,5 @@
 " {{_name_}}
-" Author: skanehira
+" Author: Signorte
 " License: MIT
 
 {{_cursor_}}

@@ -7,7 +7,7 @@ if [ "$VERSION" == "20.04" ]; then
   # https://linuxconfig.org/how-to-install-docker-on-ubuntu-20-04-lts-focal-fossa
   sudo apt install docker.io
   sudo systemctl enable --now docker
-  sudo usermod -aG docker skanehira
+  sudo usermod -aG docker Signorte
 else
   curl https://get.docker.com | sh
 fi
@@ -16,6 +16,7 @@ echo Install fish
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt-get update
 sudo apt-get install fish
+sed -e "1i exec fish" ~/.bashrc # let bash set PATH then execution fish
 
 echo Install Go
 curl -L https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz -o go.tar.gz
@@ -56,8 +57,8 @@ echo Install ag
 sudo apt-get install silversearcher-ag
 
 echo Clone my dotfiles
-ghq get github.com/skanehira/dotfiles
-cd $GOPATH/src/github.com/skanehira/dotfiles
+ghq get github.com/Signorte/dotfiles
+cd $GOPATH/src/github.com/Signorte/dotfiles
 
 echo Setup fish
 mkdir ~/.config/fish/functions
@@ -76,5 +77,58 @@ cd $GOPATH/src/github.com/vim/vim
 ./configure --with-x --enable-multibyte --enable-fail-if-missing && make && sudo make install && cd -
 
 echo Setup vim
-cd $GOPATH/src/github.com/skanehira/dotfiles/vim
+cd $GOPATH/src/github.com/Signorte/dotfiles/vim
 bash install.sh
+
+
+# brew sequence
+echo install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+echo brew update & upgrde
+brew update upgrade
+
+echo Install peco
+brew install peco
+echo Install hub
+brew install hub
+echo "alias g='cd $(ghq root)/$(ghq list | peco)'" >> ~/.bashrc
+echo "alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'" >> ~/.bashrc
+
+echo install awscli
+brew install awscli
+echo install tig
+brew install tig
+echo install pyenv
+brew install pyenv
+echo install ffmpeg
+brew install ffmpeg
+
+echo install nodebrew
+brew install nodebrew
+nodebrew setup
+echo 'export PATH=$HOME/.nodebrew/current/bin:$PATH' >> ~/.bash_profile
+$ source ~/.bash_profile
+nodebrew install-binary stable
+nodebrew use stable
+
+echo install desktop applications # CAUTION: cask process makes APP unintalled firstly and reinstalled it.
+brew cask install google-chrome
+brew cask install firefox
+brew cask install zoomus
+brew cask install slack
+brew cask install figma
+brew cask install amazon-music
+brew cask install appcleaner
+brew cask install tableau
+brew cask install visual-studio-code
+brew cask install clipy
+brew cask install bettertouchtool
+# [not supported] brew cask install bettersnaptool 
+# [not supported] brew cask install camtwist
+brew cask install cheatsheet
+brew cask install the-unarchiver
+brew cask install karabiner-elements
+brew cask install line
+brew cask install sequel-pro
+brew cask install postman
