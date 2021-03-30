@@ -5,5 +5,5 @@ case $( uname -s ) in
           bash install_darwin.sh;;
   Linux)  echo Linux
           bash install_linux.sh;; 
-  *)      echo others (neither Linux nor Darwin) so finish this sequence;;
+  *)      echo Others (neither Linux nor Darwin) so finish this sequence;;
 esac
